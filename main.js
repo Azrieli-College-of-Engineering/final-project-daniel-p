@@ -21,8 +21,6 @@ app.get('/', (req, res) => {
         </html>
     `);
 });
-
-
 // 2
 app.post('/confirm', (req, res) => {
     const { email, user, zip ,pass} = req.body;
