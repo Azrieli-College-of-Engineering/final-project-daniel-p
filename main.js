@@ -7,7 +7,7 @@ app.use(expr.urlencoded({ extended: true}));
 app.get('/', (req, res) => {
     res.send(`
         <html>
-        <head><title>מערכת רישום מאובטחת</title></head>
+        <head><title>מערכת רישום </title></head>
         <body style="font-family: sans-serif; direction: rtl; text-align: center;">
             <h2>אנא הירשם למערכת</h2>
             <form action="/confirm" method="POST" style="display: inline-block; text-align: right;">
