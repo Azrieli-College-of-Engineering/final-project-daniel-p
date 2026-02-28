@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 app.post('/confirm', (req, res) => {
     const { email, user, zip ,pass} = req.body;
     user_db.push({user, email, pass, zip});
-    let userList = user_db.map(u => {u.user}).join(' | ');
+    let userList = user_db.map(u => u.user).join(' | ');
     res.send(`
        <html>
         <body style="direction: rtl; text-align: center;">
