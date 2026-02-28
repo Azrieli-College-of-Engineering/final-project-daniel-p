@@ -1,7 +1,7 @@
 const expr = require ('express');
 const app = expr();
 const path = require('path');
-
+let user_db =[]; // a db for all user
 app.use(expr.urlencoded({ extended: true}));
 // 1. 
 app.get('/', (req, res) => {
@@ -21,13 +21,13 @@ app.get('/', (req, res) => {
         </html>
     `);
 });
-let user_db =[]; // a db for all user
+
 
 // 2
 app.post('/confirm', (req, res) => {
     const { email, user, zip ,pass} = req.body;
     user_db.push({user, email, pass, zip});
-    let userList = user_db.map(u => {u.user}).join(' | ');
+    let userList = user_db.map(u => {u.user}).join(' ');
     res.send(`
        <html>
         <body style="direction: rtl; text-align: center;">
