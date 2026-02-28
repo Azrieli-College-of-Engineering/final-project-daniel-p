@@ -2,3 +2,4 @@
 2) node main in a 2nd terminal 
 3) copy the text in payloud.txt to user name 
 4) see in python terminal all the data 
+5) now enter a second user and see that you get his info on the python terminal
